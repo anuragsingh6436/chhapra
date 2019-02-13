@@ -36,7 +36,7 @@ app.post('/signup',function(req,res){
    user.name= req.body.name;
    user.address= req.body.address;
    user.password= req.body.password;
-   User.find({username:req.body.username},(err,userfound)=>{
+   User.findOne({username:req.body.username},(err,userfound)=>{
       if(userfound){
         console.log(userfound);
         console.log("Username exists");
