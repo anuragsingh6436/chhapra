@@ -2,6 +2,7 @@
 const path = require('path');
 const mongoose =require('mongoose');
 const bodyParser=require('body-parser');
+const port = process.env.PORT || 3000;
 //mongoose.connect('mongodb://localhost/nodekb');
 mongoose.connect('mongodb+srv://asr_123:anurag@123@cluster0-nyfnu.mongodb.net/test1?retryWrites=true',{ useNewUrlParser: true });
 let db =mongoose.connection;
@@ -29,11 +30,7 @@ app.use(express.static(path.join(__dirname,'public')));
 app.get('/',function(req,res){
   res.sendFile('asr1.html', {root: __dirname })
 });
-
-
-
-
- app.post('/signup',function(req,res){
+app.post('/signup',function(req,res){
    let user = new User();
    user.username= req.body.username;
    user.name= req.body.name;
@@ -62,6 +59,11 @@ app.get('/',function(req,res){
 
  });
 
-app.listen(3000,function(){
+ app.post('/login',function(req,res){
+  let user1=new User1();
+
+ });
+
+app.listen(port,function(){
   console.log('server started at port 3000');
 });
