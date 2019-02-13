@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<title>HOME</title>
+<body style="background-image: url('image.jpg');background-repeat:no-repeat;background-size:cover">
+
+<h1 align="center">CHHAPRA</h1>
+
+
+
+</nav>
+<br>
+<% if(error) { %>
+<script>
+alert("<%=error%>");
+</script>
+<% } %>
+<br>
+<h2 align="center">Sign In</h2>
+ <div class="imgcontainer">
+    <img src="img.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+  <form action="/signup" method="POST">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
+     <label for="uname"><b>NAME</b></label>
+    <input type="text" placeholder="Enter Name" name="name" required>
+     <label for="uname"><b>Address</b></label>
+    <input type="text" placeholder="Enter Address" name="address" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>    
+    <button onclick="myFunction()" type="Submit">Sign Up</button>
+</form>
+      <div id="snackbar">Welcome to Anurag's website</div>
+    <label>
+    <br>
+     <br>
+      <br>
+       <br>
+        <br>
+
+<div class="footer">
+  <p3>facebook:Anurag Singh</p3>
+  <br>
+  <p3>gmail:anuragsingh6436@gmail.com</p3>
+  <br>
+  <p3>contact:7485870287</p3>
+  <br>
+  <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+  <a href="https://twitter.com/login?lang=en" class="fa fa-twitter"></a>
+  <a href="https://www.google.com/" class="fa fa-google"></a>
+  <a href="https://www.instagram.com/accounts/login/?hl=en" class="fa fa-instagram"></a>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+function myFunction() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+</script>
+
+
+
+</body>
+</html> 
